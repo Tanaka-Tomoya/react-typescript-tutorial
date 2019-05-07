@@ -23,16 +23,17 @@ class App extends Component {
         age: 18,
       },
     ];
-
     return (
       <div className="container">
         <header>
-          <h1>はねバド！ キャラクター一覧</h1>
+          <h1>キャラクター一覧</h1>
+          <CharacterList school="北小町高校" characters={characters}/>
         </header>
-        <CharacterList school="北小町高校" characters={characters} />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
+
+

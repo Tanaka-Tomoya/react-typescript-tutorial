@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Header, Icon, Item } from 'semantic-ui-react';
+import { Header, Icon ,Item } from 'semantic-ui-react';
 
 export interface Character {
   id: number;
@@ -10,7 +10,7 @@ export interface Character {
 
 interface CharacterListProps {
   school: string;
-  characters: Character[]; // Characterオブジェクトを要素に持った持った配列
+  characters: Character[]
 }
 
 class CharacterList extends Component<CharacterListProps> {
@@ -22,11 +22,11 @@ class CharacterList extends Component<CharacterListProps> {
         <Header as="h2">{school}</Header>
         <Item.Group>
           {characters.map(c => (
-            <Item kye={c.id}>
-              <Icon name="user circle" size="huge" />
+            <Item key={c.id}>
+              <Icon name="user circle" size="huge"/>
               <Item.Content>
                 <Item.Header>{c.name}</Item.Header>
-                <Item.Meta>{c.age}歳</Item.Meta>
+                <Item.Meta>{c.age}</Item.Meta>
                 <Item.Meta>
                   {c.height ? c.height : '???'}
                   cm
@@ -36,8 +36,8 @@ class CharacterList extends Component<CharacterListProps> {
           ))}
         </Item.Group>
       </>
-    );
+    )
   }
 }
 
-export default CharacterList;
+export default CharacterList
