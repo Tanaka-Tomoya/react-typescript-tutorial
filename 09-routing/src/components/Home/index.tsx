@@ -7,6 +7,7 @@ import { characterData } from '../../characterData';
 import './index.css';
 
 const codes = Object.keys(characterData);
+console.log(codes)
 
 const Home: FC<{}> = () => (
   <>
@@ -26,15 +27,15 @@ const Home: FC<{}> = () => (
         そんなとき、運動神経抜群でバドミントン経験者の1年生「羽咲綾乃」を見かけた立花は、彼女を部にスカウトしようとするが……。
       </p>
     </Container>
-    <h2>登場人物</h2>
-    <List as="ul">
-      {codes.map(code => (
+    <List as='ul'>
+      {codes.map( code => (
         <List.Item as="li" key={code}>
           <Link to={`/characters/${code}`}>{characterData[code].school}</Link>
         </List.Item>
       ))}
     </List>
   </>
-);
+)
 
 export default Home;
+
