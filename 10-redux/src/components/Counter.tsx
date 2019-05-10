@@ -4,7 +4,7 @@ import { Button, Card, Statistic } from 'semantic-ui-react';
 import './Counter.css';
 
 export interface CounterProps {
-  count?: number;
+  count? : number;
   add?: (amount: number) => void;
   decrement?: () => void;
   increment?: () => void;
@@ -14,7 +14,7 @@ const Counter: FC<CounterProps> = ({
   count = 0,
   add = () => {},
   decrement = () => {},
-  increment = () => {},
+  increment = () => {}
 }) => (
   <Card>
     <Statistic className="number-board">
@@ -23,10 +23,10 @@ const Counter: FC<CounterProps> = ({
     </Statistic>
     <Card.Content>
       <div className="ui two buttons">
-        <Button color="red" onClick={decrement}>
+        <Button color='red' onClick={decrement}>
           -1
         </Button>
-        <Button color="green" onClick={increment}>
+        <Button color='green' onClick={increment}>
           +1
         </Button>
       </div>
@@ -37,6 +37,6 @@ const Counter: FC<CounterProps> = ({
       </div>
     </Card.Content>
   </Card>
-);
+)
 
 export default Counter;
